@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /*給予父元素一個相對定位*/
+      body {
+        height: 1920px;
+      }
+      .container {
+        background-color: skyblue;
+        height: 600px;
+        width: 600px;
+        position: relative;
+      }
+      /*子元素就可以在父元素內絕對定位*/
+      .relative {
+        background-color: #555;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+      }
+      .fixed {
+        background-color: rgb(230, 157, 157);
+        height: 200px;
+        width: 200px;
+        position: fixed;
+        right: 500px;
+        top: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="relative"></div>
+      <div class="fixed"></div>
+    </div>
+  </body>
+</html>

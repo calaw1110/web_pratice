@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <title>BS4-基本類別-導覽列</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
+            <button
+              data-toggle="collapse"
+              data-target="#submenu"
+              class="navbar-toggler"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="w-75 d-flex justify-content-center justify-content-sm-start align-items-center"
+            >
+              <h1 class="navbar-brand">DHS</h1>
+            </div>
+            <div
+              class="collapse  navbar-collapse  justify-content-sm-end"
+              id="submenu"
+            >
+              <ul class="navbar-nav ">
+                <li class="nav-item"><a href="" class="nav-link">link1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">link2</a></li>
+                <li class="nav-item"><a href="" class="nav-link">link3</a></li>
+                <li class="nav-item"><a href="" class="nav-link">link4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!--
+   通過刪除 .navbar-expand-xl|lg|md|sm 類來創建垂直巡覽列:
+   例
+    垂直巡覽列
+    <nav class="navbar bg-light">
+     Links
+      <ul class="navbar-nav">
+        <li class="nav-item"> <a class="nav-link" href="#">Link 1</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Link 2</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Link 3</a> </li>
+      </ul>
+    </nav>
+
+   可以使用以下類來創建不同顏色巡覽列：.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark 和 .bg-light)。
+    提示: 對於暗色背景需要設置文本顏色為淺色的，對於淺色背景需要設置文本顏色為深色的。
+    例
+    灰底黑字:
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item active"> <a class="nav-link" href="#">Active</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+        <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+      </ul>
+    </nav>
+
+    黑底白字:
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">...</nav>
+
+    藍底白字:
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">...</nav>
+
+    啟動和禁用狀態: 可以在 <a> 元素上添加 .active 類來高亮顯示選中的選項。 .disabled 類用於設置該連
+    結是不可點擊的。
+
+  .navbar-brand 類用於高亮顯示品牌/Logo:
+    例
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Logo</a> ...
+    </nav>
+
+  要創建折疊導覽列，可以在按鈕上添加 class="navbar-toggle", data-toggle="collapse" 與
+  data-target="#thetarget" 類。然後在設置了 class="collapse navbar-collapse" 類的 div 上包裹
+  導航內容（連結）, div 元素上的 id 匹配按鈕 data-target 的上指定的 id:
+  例
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"> <a class="nav-link" href="#">YAHOO</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">SINA</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">GOOGLE</a> </li>
+      </ul>
+    </div>
+    </nav>
+
+
+  導覽列可以固定在頭部或者底部。 我們使用
+  .navbar-fixed-top 類來實現導覽列的固定：
+  例
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> ... </nav>
+
+
+  .navbar-fixed-bottom 類用於設置導覽列固定在底部：
+  例
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom"> ... </nav>
+ -->

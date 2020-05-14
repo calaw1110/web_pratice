@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        console.log("ready");
+        $("#selected")
+          .prev() //此元素的前一個元素
+          .css({
+            color: "red",
+            backgroundColor: "#ff0"
+          });
+        $("#selected2")
+          .next() //此元素的後一個元素
+          .css({
+            color: "blue",
+            backgroundColor: "#a0a"
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <p>1</p>
+    <p id="selected2">2</p>
+    <p>3</p>
+    <p>4</p>
+    <p id="selected">5</p>
+  </body>
+</html>

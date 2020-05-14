@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        background-color: #000;
+      }
+      nav {
+        height: 60px;
+        width: 960px;
+        margin: auto;
+      }
+      nav .logo {
+        float: left;
+      }
+      nav .menu {
+        float: left;
+      }
+      nav .search {
+        float: left;
+      }
+      nav li {
+        float: left;
+        list-style: none;
+      }
+      nav ul {
+        padding: 0;
+        margin: 0;
+      }
+      nav a {
+        color: #999;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 15px;
+        display: block;
+        /* 轉場特效 */
+        transition: 0.5s;
+      }
+      .logo {
+        width: 300px;
+        height: 60px;
+      }
+      nav .logo a {
+        padding-right: 50px;
+        font-size: 1.5em;
+        /* background: #555; */
+        /* color: white; */
+        display: block;
+      }
+      nav .menu a:hover {
+        color: #fff;
+      }
+      nav .search a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://www.apple.com/ac/globalnav/5/zh_TW/images/globalnav/apple/image_large.svg"
+              alt="logo"
+              width="60px"
+              height="60px"
+            />
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li>
+              <a href="#">Watch</a>
+            </li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Music</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <ul>
+            <li><a href="">支援服務</a></li>
+            <li>
+              <a href="#">
+                <img
+                  src="images/search.png"
+                  alt="search"
+                  width="15px"
+                  height="15px"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://store.storeimages.cdn-apple.com/8756/store.apple.com/shop/rs-external/rel/tw/ac-globalnav-dist/images/globalnav/bag/image_large.svg"
+                  width="30px"
+                  height="50px"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

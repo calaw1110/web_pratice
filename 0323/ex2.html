@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <title>BS4-基本類別-輪播照片</title>
+    <style>
+      .carousel-indicators .aaa {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col p-0">
+          <div class="carousel slide" data-ride="carousel" id="show">
+            <div class="carousel-inner">
+              <ul class="carousel-indicators">
+                <li
+                  data-target="#show"
+                  data-slide-to="0"
+                  class="aaa active"
+                ></li>
+                <li data-target="#show" data-slide-to="1" class="aaa "></li>
+                <li data-target="#show" data-slide-to="2" class="aaa "></li>
+              </ul>
+              <div class="carousel-item active">
+                <img src="images/s1.jpg" alt="" class="img-fluid" />
+                <div class="carousel-caption">
+                  <h3>123</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias suscipit tempora quos, repellat itaque similique
+                    officiis nulla numquam.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/s2.jpg" alt="" class="img-fluid" />
+                <div class="carousel-caption">
+                  <h3>789</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias suscipit tempora quos, repellat itaque similique
+                    officiis nulla numquam.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/s3.jpg" alt="" class="img-fluid" />
+                <div class="carousel-caption">
+                  <h3>456</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestias suscipit tempora quos, repellat itaque similique
+                    officiis nulla numquam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#show" data-slide="prev" class="carousel-control-prev"
+              ><span class="carousel-control-prev-icon"></span
+            ></a>
+            <a href="#show" data-slide="next" class="carousel-control-next"
+              ><span class="carousel-control-next-icon"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!--
+   在每個 <div class="carousel-item">內增加 <div class="carousel-caption"> 來設置輪播圖片的
+    描述文字：
+    例
+    <div class="carousel-item">
+      <img src="#">
+      <div class="carousel-caption">
+        <h3>第一張圖片描述標題</h3>
+        <p>描述文字!</p>
+      </div>
+    </div>
+ -->

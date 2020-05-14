@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function() {
+        let title = document.getElementById("title");
+        // title.addEventListener("click", function() {
+        //   css_add();
+        // });
+        title.addEventListener("click", css_add);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="title">HELLO WORLD</h1>
+    <button onclick="css_add();">CLICK</button>
+    <button onclick="css_remove();">移除 h1 監聽事件</button>
+    <div class="box">BOX-1</div>
+    <div class="box">BOX-2</div>
+    <div class="box">BOX-3</div>
+    <div class="box">BOX-4</div>
+
+    <script>
+      function css_remove() {
+        let title = document.getElementById("title");
+        title.removeEventListener("click", css_add);
+      }
+
+      function css_add() {
+        let title = document.getElementById("title");
+        console.log(title.style);
+        title.style.color = "red";
+        title.style.backgroundColor = "#333333";
+
+        let title1 = document.getElementById("title").style;
+        console.log(title1);
+        title1.color = "red";
+        title1.backgroundColor = "#333333";
+        title1.width = "200px";
+        title1.height = "200px";
+      }
+    </script>
+  </body>
+</html>

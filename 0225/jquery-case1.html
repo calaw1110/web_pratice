@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $().ready(function() {
+        console.log("ready");
+        $("button#next").click(function() {
+          const current = $("#light");
+          const start = current.next(".box");
+          console.log("test");
+          if (start.length) {
+            current.removeAttr("id", "");
+            start.attr("id", "light");
+          }
+        });
+        $("button#pre").click(function() {
+          const current = $("#light");
+          const start = current.prev(".box");
+          if (start.length) {
+            current.removeAttr("id", "");
+            start.attr("id", "light");
+          }
+        });
+      });
+    </script>
+    <style>
+      .box {
+        width: 38px;
+        height: 38px;
+        border: 1px solid;
+        float: left;
+        margin: 10px;
+      }
+      #light {
+        background-color: yellow;
+      }
+      .clearfix {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="light"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="clearfix"></div>
+    <button id="pre">pre</button><button id="next">next</button>
+  </body>
+</html>

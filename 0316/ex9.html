@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <title>BS4-基本類別-下拉式功能表</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              menu
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <p class="dropdown-header">select</p>
+              <a href="" class="dropdown-item">123</a>
+              <a href="" class="dropdown-item">123</a>
+              <a href="" class="dropdown-item">123</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      基本說明
+      .dropdown 類用來指定一個下拉式功能表。
+      我們可以使用一個按鈕或連結來打開下拉式功能表， 按鈕或連結需要添
+      加 .dropdown-toggle 和 data-toggle="dropdown" 屬性。
+      class to a <div> 元素上添加 .dropdown-menu 類來設置實際下拉式功能表，然後在下拉式功能表的選項中
+      添加 .dropdown-item 類。  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!--
+.dropdown-divider 類用於在下拉式功能表中創建一個水準的分割線：
+    例:<div class="dropdown-divider"></div>
+
+.dropdown-header 類用於在下拉式功能表中添加標題：
+    例:<div class="dropdown-header">Dropdown header 1</div>
+
+.active 類會讓下拉式功能表的選項高亮顯示 (添加藍色背景)。
+如果要禁用下拉式功能表的選項，可以使用.disabled 類。
+    例:<a class="dropdown-item active" href="#">Active</a> <a class="dropdown-item disabled"
+ href="#">Disabled</a>
+
+ 如果我們想讓下拉式功能表右對齊，可以在元素上的 .dropdown-menu 類後添加 .dropdown-menu-right 類。
+    例:<div class="dropdown-menu dropdown-menu-right">
+
+如果你希望下拉式功能表向上彈出，可以將 <div> 元素的 class="dropdown" 替換為 "dropup":
+    例:<div class="dropup">
+
+我們可以在按鈕中添加下拉式功能表：
+例:
+  <div class="btn-group">
+  <button type="button" class="btn btn-primary">Sony</button>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+   data-toggle="dropdown">
+  <span class="caret"></span>
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Tablet</a> <a class="dropdown-item" href="#">Sm
+  artphone</a>
+  </div>
+
+ -->

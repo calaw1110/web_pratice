@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3-Loading Animation</title>
+    <style type="text/css">
+      body {
+        width: 180px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -90px;
+        margin-top: -90px;
+      }
+      #loading {
+        width: 150px;
+        height: 150px;
+        border: rgba(228, 86, 89, 1) 2px solid;
+        border-right: rgb(0, 26, 255) 4px solid;
+        border-radius: 100%;
+
+        animation: loading 2s infinite linear;
+      }
+      @keyframes loading {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      #content {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        width: 1px;
+        overflow: hidden;
+        height: 20px;
+        animation: showText 5s infinite linear;
+      }
+      @keyframes showText {
+        from {
+          width: 1px;
+        }
+        to {
+          width: 250px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">載入中....請稍後..</div>
+    <div id="loading"></div>
+  </body>
+</html>
+<!--
+請讓這個圓形旋轉吧!!
+ -->

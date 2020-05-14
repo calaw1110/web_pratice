@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>BS4-基本類別-摺疊</title>
+  </head>
+  <body>
+     <div class="container">
+       <div class="row">
+         <div class="col">
+            <button data-toggle="collapse" data-target="#c1">關閉與顯示</button>
+            <p id="c1" class="collapse show">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <hr>
+         <div class="row">
+          <div class="col">
+           <h1 class="text-secondary">客戶服務</h1>
+           <button data-toggle="collapse" data-target="h3" class="bg-primary">全部展開/隱藏</button>
+           <h2 data-toggle="collapse" data-target="#q1a" class="h4 text-info mt-3">是否有提供送貨到離島的服務？</h2>
+           <h3 id="q1a" class="collapse small p1-3">因航運成本較高，本站提供免運費服務的範圍只限台灣本島。
+若送貨地點是在離島等地時，目前暫不提供寄送服務。</h3>
+           <h2 data-toggle="collapse" data-target="#q2a" class="h4 text-info mt-3">最多試用幾天內才能退貨呢？</h2>
+           <h3 id="q2a" class="collapse small p1-3">依照消保法規定，消費者均享有商品到貨七天猶豫期之權益。
+但退回商品必須是全新狀態且完整包裝，否則恕不接受退貨。</h3>
+           <h2 data-toggle="collapse" data-target="#q3a" class="h4 text-info mt-3">退貨時是否需要負擔運費？</h2>
+           <h3 id="q3a" class="collapse small p1-3">只要消費者是在七天的猶豫期或是保固期限之內退貨的話，
+其運費均由本站全額負責。</h3>
+          </div>
+         </div>
+       </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- 
+    例: 
+    <a href="#demo" data-toggle="collapse">Collapsible</a>  
+    <div id="demo" class="collapse"> Lorem ipsum dolor text.... </div> 
+    預設情況下折疊的內容是隱藏的，你可以添加 .show 類讓內容預設顯示: 
+
+    例: 
+    以下實例通過擴展卡片元件來顯示簡單的手風琴。 
+    注意: 使用 data-parent 屬性來確保所有的折疊元素在指定的父元素下，這樣就能實現在一個折疊選項顯示
+    時其他選項就隱藏。 
+ 
+<div id="accordion">  
+<div class="card">  
+  <div class="card-header">  
+    <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#colla
+    pseOne"> Collapsible Group Item #1 </a>  
+  </div>  
+  <div id="collapseOne" class="collapse show">  
+    <div class="card-body"> Lorem ipsum.. </div>  
+  </div>  
+</div>  
+
+<div class="card">  
+  <div class="card-header">  
+    <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="
+    #collapseTwo"> Collapsible Group Item #2 </a>  
+  </div>  
+  <div id="collapseTwo" class="collapse">  
+    <div class="card-body"> Lorem ipsum.. </div>  
+  </div>  
+</div>
+
+<div class="card">  
+  <div class="card-header"> 
+    <a class="collapsed card-link" data-toggle="collapse" data-
+  parent="#accordion" href="#collapseThree"> Collapsible Group Item #3 </a>  
+  </div>  
+  <div id="collapseThree" class="collapse">  
+    <div class="card-body"> Lorem ipsum.. </div>  
+  </div>  
+  </div>  
+</div> 
+ -->

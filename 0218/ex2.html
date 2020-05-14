@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        let title = document.getElementById("title");
+        title.addEventListener("click", getBMI);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="title">BMI 調查</h1>
+    <form action="">
+      <table>
+        <tr>
+          <td>身高：<input id="h" name="h" type="text" />(單位：公分)</td>
+        </tr>
+        <tr>
+          <td>體重：<input id="w" name="w" type="text" />(單位：公斤)</td>
+        </tr>
+        <tr>
+          <td><button type="reset">清除</button></td>
+          <td><button type="button" onclick="getBMI()">計算</button></td>
+        </tr>
+        <tr>
+          <td>BMI是<input id="bmi" name="bmi" type="text" /></td>
+        </tr>
+        <tr>
+          <td><p id="p"></p></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function getBMI() {
+        let w = document.getElementById("w").value; //取得體重的值
+        let h = document.getElementById("h").value; //取得身高的值
+        let bmi = w / (h / 100) / (h / 100);
+        document.getElementById("bmi").value = bmi.toFixed(2); //to.Fixed(2) 取小數點第二位
+        
+      }
+    </script>
+  </body>
+</html>

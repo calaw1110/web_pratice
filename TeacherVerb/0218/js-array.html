@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sort_num1(a, b) {
+        // return a - b; //數字排序由小至大
+        return b - a; //數字排序由大至小
+      }
+      var a = ["HTML", "CSS", "JAVASCRIPT", "PHP", "RWD", "JQUERY", "LARAVEL"];
+      console.log(a);
+      a.push("ASP");
+      console.log(a);
+      a.pop();
+      console.log(a);
+      a.shift(a);
+      console.log(a);
+      a.unshift("MYSQL");
+      console.log(a);
+      a.splice(2, 2);
+      console.log(a);
+
+      let age = [4000, 300, 20, 1, -5, 200, 400, 60];
+      console.log(age);
+      age.sort(sort_num1);
+      console.log(age);
+
+      let o = {
+        //屬性
+        name: "Allen",
+        age: 30,
+        mail: "abc@msa.hinet.net",
+        subject: [
+          "HTML",
+          "CSS",
+          "JAVASCRIPT",
+          "PHP",
+          "RWD",
+          "JQUERY",
+          "LARAVEL"
+        ],
+        o1: {
+          s1: "HTML",
+          s2: "CSS",
+          s3: "JAVASCRIPT",
+          s4: "PHP",
+          s5: "RWD",
+          s6: "JQUERY",
+          s7: "LARAVEL"
+        }
+      };
+
+      console.log(o);
+      console.log(o.name);
+      console.log(o.mail);
+      //陣列呼叫
+      console.log(o.subject);
+      console.log(o.subject[0]);
+      //物件呼叫
+      console.log(o.o1);
+      console.log(o.o1.s1);
+
+      let objs = [];
+      objs = [
+        {
+          name: "iPhone XS",
+          color: ["silver", "gray", "gold"],
+          size: ["64gb", "256gb", "512gb"]
+        },
+        {
+          name: "iPhone XS Max",
+          color: ["silver", "gray", "gold"],
+          size: ["64gb", "256gb", "512gb"]
+        }
+      ];
+      console.log(objs[1].size[2]);
+      objs.forEach(function(data) {
+        console.log(data.name);
+        data.color.forEach(function(d) {
+          console.log(d);
+        });
+        data.size.forEach(function(d) {
+          console.log(d);
+        });
+      });
+
+      console.log(objs.length);
+      for (let i = 0; i < objs.length; i++) {
+        console.log(objs[i]);
+        for (let j = 0; j < objs[i].color.length; j++) {
+          console.log(objs[i].color[j]);
+        }
+      }
+    </script>
+  </body>
+</html>

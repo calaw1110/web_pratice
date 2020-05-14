@@ -1,0 +1,343 @@
+:root {
+  --primaryColor: #ff6060;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  height: 2000px;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  width: 100%;
+  /* vertical-align: top; */
+}
+
+/* GLOBAL */
+li {
+  list-style: none;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* GRID FOR DESKTOP */
+
+.full-width {
+  width: 100%;
+}
+
+.fixed-width {
+  width: 1200px;
+  margin: auto;
+}
+
+.col-12 {
+  width: calc(100% / 12 * 12);
+}
+
+.col-11 {
+  width: calc(100% / 12 * 11);
+}
+
+.col-10 {
+  width: calc(100% / 12 * 10);
+}
+
+.col-9 {
+  width: calc(100% / 12 * 9);
+}
+
+.col-8 {
+  width: calc(100% / 12 * 8);
+}
+
+.col-7 {
+  width: calc(100% / 12 * 7);
+}
+
+.col-6 {
+  width: calc(100% / 12 * 6);
+}
+
+.col-5 {
+  width: calc(100% / 12 * 5);
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+}
+
+.col-3 {
+  width: calc(100% / 12 * 3);
+}
+
+.col-2 {
+  width: calc(100% / 12 * 2);
+}
+.col-1 {
+  width: calc(100% / 12 * 1);
+}
+
+[class*="col"] {
+  float: left;
+  padding: 10px;
+}
+
+.nopa {
+  padding: 0 !important;
+}
+
+/* nav info */
+#nav-info .addr {
+  float: left;
+  padding: 8px 5px;
+  /* line-height: 50px; */
+}
+
+#nav-info .register {
+  float: right;
+  padding: 8px 5px;
+  /* line-height: 50px; */
+}
+
+#nav-info .donate {
+  float: right;
+}
+
+#nav-info .register li {
+  /* list-style: none; */
+  float: left;
+}
+#nav-info {
+  /* height: 50px; */
+  /* line-height: 50px; */
+  /* background-color: #ccc; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* background-color: #ccc; */
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+
+#nav-info a {
+  display: inline-block;
+}
+
+.donate {
+  margin-left: 30px;
+}
+
+/* nav */
+nav {
+  /* background-color: #ccc; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav a {
+  display: block;
+  padding: 8px 15px;
+}
+nav .logo {
+  float: left;
+}
+
+nav .menu {
+  float: right;
+}
+
+nav .menu li {
+  float: left;
+}
+
+#scroll {
+  height: 100px;
+  background-color: rgba(150, 150, 150, 0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 700px;
+}
+#scroll .date {
+  float: left;
+}
+#scroll .time {
+  color: white;
+  float: left;
+}
+#scroll .introduce a {
+  font-size: 1.5em;
+  color: white;
+}
+#scroll .introduce a:hover {
+  font-size: 1.5em;
+  color: #ff6060;
+}
+#scroll .box2 p {
+  font-size: 0.5em;
+  color: white;
+}
+
+#scroll .button a {
+  display: block;
+  color: #fff;
+  border: 3px solid #ddd;
+  font-size: 18.75px;
+  padding: 19px;
+  float: right;
+}
+#scroll .button a:hover {
+  display: block;
+  color: #ff6060;
+  border: 3px solid rgba(255, 132, 132, 0.3);
+  font-size: 18.75px;
+  padding: 19px;
+  float: right;
+}
+
+/* #scroll .button a:hover {
+  padding: 8px 15px;
+  color: #ff6060;
+} */
+.box3 {
+  height: 100px;
+}
+#scroll .location {
+  color: white;
+  float: right;
+  margin-right: 50px;
+}
+#scroll .box1 {
+  margin-right: 25px;
+  padding: 10px 5px;
+  width: 65px;
+  height: 75px;
+  background-color: #ff6060;
+  color: #fff;
+}
+#scroll .day {
+  text-align: center;
+  font-size: 2em;
+}
+#scroll .m_y {
+  text-align: center;
+  font-size: 0.8em;
+}
+#scroll .box2 {
+  padding-top: 10px;
+}
+
+/* header */
+header {
+  height: 800px;
+  background-image: url("../../images/header2_0212.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#feature {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* background: #555; */
+}
+#feature .col-7 {
+  /* background: rgb(170, 154, 154); */
+}
+#feature h2 {
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#feature h3 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#feature p {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+#feature .gallery {
+  padding: 30px 150px;
+}
+
+.line {
+  position: relative;
+}
+.line::before {
+  position: absolute;
+  content: "";
+  display: block;
+  border-top: 3px solid #ff6a48;
+  width: 60px;
+  top: 22px;
+  left: 22px;
+}
+
+.line-light {
+  position: relative;
+}
+.line-light::before {
+  position: absolute;
+  content: "";
+  display: block;
+  border-top: 3px solid #fff5f3;
+  width: 60px;
+  top: 22px;
+  left: 22px;
+}
+.left-border {
+  padding-top: 20px;
+  padding-right: 150px;
+  border-left: white solid 1px;
+}
+.small {
+  margin-top: -30px;
+}
+.toright {
+  padding-left: 100px;
+}

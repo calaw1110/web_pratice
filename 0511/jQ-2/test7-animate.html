@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>透過基本語法實現不同的照片展示自動切換播放</title>
+    <style type="text/css"></style>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+      img {
+        margin-left: -100%;
+        position: absolute;
+      }
+      #showArea {
+        width: 800px;
+        height: 533px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -400px;
+        margin-top: -266px;
+      }
+
+      #showArea ul {
+        position: absolute;
+        left: 0;
+        top: 90%;
+        z-index: 999;
+        width: 100%;
+        height: 5%;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+      }
+
+      #showArea ul li {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 0px 3px;
+      }
+	  #showArea ul li:hover{
+		  cursor: pointer;
+	  }
+    </style>
+	<script type="text/javascript">
+	  $(function(){
+		var tc;
+      $("button").css({ opacity: "0.5", color: "blue" }, 800);
+      $("button").hover(
+        function () {
+          $(this).animate({ opacity: "1", color: "#ffff00" }, 800);
+        },
+        function () {
+          $(this).animate({ opacity: "0.5" }, 800);
+        }
+      );
+      function showFirst() {
+        $("#img1").css("margin-left", "0%");
+        tc=setTimeout(p2, 3000);
+      }
+
+      function p1() {
+        $("#img3").animate({ "margin-left": "100%" }, 800);
+        $("#img1").css({ "margin-left": "-100%", "z-index": "4" });
+        $("#img1").animate({ "margin-left": "0%" }, 800);
+		tc=setTimeout(p2, 3000);
+      }
+      function p2() {
+        $("#img1").animate({ "margin-left": "100%" }, 800);
+        $("#img2").css({ "margin-left": "-100%", "z-index": "4" });
+        $("#img2").animate({ "margin-left": "0%" }, 800);
+		tc=setTimeout(p3, 3000);
+      }
+      function p3() {
+        $("#img2").animate({ "margin-left": "100%" }, 800);
+        $("#img3").css({ "margin-left": "-100%", "z-index": "4" });
+        $("#img3").animate({ "margin-left": "0%" }, 800);
+		tc=setTimeout(p1, 3000);
+      }
+      showFirst();
+
+			$("#b1").click(function(){
+				clearTimeout(tc)
+				p1()
+				})
+			$("#b2").click(function(){
+				clearTimeout(tc)
+				p2()
+				})
+			$("#b3").click(function(){
+				clearTimeout(tc)
+				p3()
+				})
+})
+
+
+
+    </script>
+  </head>
+  <body>
+	<button>JQQQQQQQQQQQQ</button>
+	<div id="showArea">
+		<ul>
+		 <li id="b1"></li>
+		 <li id="b2"></li>
+		 <li id="b3"></li>
+		</ul>
+    <img src="images/slider1.jpg" alt="" id="img1" />
+    <img src="images/slider3.jpg" alt="" id="img2" />
+    <img src="images/slider5.jpg" alt="" id="img3" />
+  </body>
+  </div>
+</html>

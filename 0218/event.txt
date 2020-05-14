@@ -1,0 +1,19 @@
+參考網站:
+         http://www.w3schools.com/js/js_htmldom_events.asp
+
+Event 名稱		jQuery		說明
+-------------------------------------------------------------------------------------------------------------
+onclick			click		按鈕事件。     當使用者點擊觸發某物件時，例如按鈕 button。
+onchange		change		內容改變事件。 當元件內容改變時，例如下拉式選單或是 Text 輸入文字。
+onblur					當游標失去焦點時，也就是點選其他區域時，通常用於填完表單的一個欄位。
+ondblclick		dbclick		滑鼠雙按事件。 Double Click.	使用者針對某物件連兩下。
+onfocus					當類似 Text 輸入框被點選時，也就是物件被選取的時候。
+onload			load 		載入事件(HTML/IMG 影像/外部樣式表 全部載入完成)。
+                                        當物件被載入完成後立即觸發的動作，例如在 body 或 img 物件內使用。
+onmousedown				物件當滑鼠按鍵被按下的時候。
+onmouseover		mouseenter	滑鼠進入事件。 當滑鼠游標移動到某個物件時，例如滑鼠移動到某張圖片，進而施行換圖的動作，就用此事件。。
+onmousemove				滑鼠游標移動時。
+onmouseout		mouseleave	滑鼠離開事件。 當滑鼠移開某個物件的時候觸發。
+onmouseup		onmousedown     是按下滑鼠時觸發，onmouseup是放開點擊滑鼠的時候觸發。
+onunload		  		離開此網頁的時候觸發，可以用來確定使用者是否真的要離開。
+                        submit          表單送出。

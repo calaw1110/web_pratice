@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let a = ["html", "css", "javascript", "sql", "asp"];
+      console.log(a);
+      a.push("php"); //從陣列尾巴加入一個元素進去
+      console.log(a);
+      a.pop(); //刪除陣列最後一個元素
+      console.log(a);
+      a.unshift("jsp"); //從陣列頭加入一個元素進去
+      console.log(a);
+      a.shift(); //從陣列頭刪除一個元素
+      console.log(a);
+
+      a.splice(2, 3); //splice(x,y)  從陣列中第X個索引 開始往頭方向刪除Y個元素
+      console.log(a);
+
+      function sort_num(a, b) {
+        return a - b; //從小排到大
+        // return b - a; //從大到小
+      }
+
+      let age = [1000, 1234, 543, 12, 3, 4, 7777, 0, 2, 87654, 12345]; //普通sort排序 會因元素變多而無效
+      console.log(age);
+      age.sort(sort_num);
+      console.log(age);
+
+      //用大括號 { } 宣告為物件
+      let o = {
+        //屬性
+        name: "calaw",
+        age: 24,
+        mail: "calaw@gmail.com",
+        subject: ["html", "css", "js", "asp", "php", "jsp", "django"],
+
+        o1: {
+          a: "asd",
+          b: "cxz",
+          c: "dsa",
+          d: "zxc"
+        }
+      };
+      //物件呼叫
+      console.log(o.o1.a);
+
+      let objs = []; //宣告陣列
+      objs = [
+        //陣列內宣告物件
+        {
+          name: ["ihpone xs"],
+          color: ["red", " blue", " yellow"],
+          storage: ["128g ", "256g", "512g"]
+        },
+        {
+          name: ["ihpone 11 pro max"],
+          color: ["red", "blue", "yellow", "gray", " white", " black"],
+          storage: ["128g", " 256g", "512g", "1tb"]
+        }
+      ];
+      console.log("---------use forEach------------");
+
+      objs[0].color.forEach(function(data) {
+        console.log(data);
+        // data.color.forEach(function(data) {
+        //   console.log(data);
+      });
+      data.storage.forEach(function(d) {
+        console.log(d);
+      });
+      //   });
+
+      console.log("----------use forLoop-----------");
+
+      for (let i = 0; i < objs.length; i++) {
+        {
+          console.log(objs[i]);
+        }
+        for (let j = 0; j < objs[i].name.length; j++) {
+          console.log(objs[i].name[j]);
+        }
+        for (let j = 0; j < objs[i].color.length; j++) {
+          console.log(objs[i].color[j]);
+        }
+        for (let j = 0; j < objs[i].storage.length; j++) {
+          console.log(objs[i].storage[j]);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

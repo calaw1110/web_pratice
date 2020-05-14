@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="從後台取出數據 by GET"
+      id="btnGet"
+    /><br /><br />
+    <input type="button" value="從後台取出數據 by POST" id="btnPost" />
+
+    <script>
+      window.onload = function() {
+        console.log("window loaded");
+        let btnGet = document.getElementById("btnGet");
+        btnGet.onclick = function() {
+          console.log("click");
+          //   開始跟後台進行互動
+          //   創建 xhr 對象
+          var xhr = new XMLHttpRequest();
+          //   與遠端連線
+          xhr.open("GET", "user.json?id=111", true);
+          //   發送請求數據
+          xhr.send();
+
+          xhr.onreadystatechange = function() {
+            console.log("readyState:%s", xhr.readyState); //xhr 請求的狀態
+            console.log("status:%s", xhr.status); //後臺響應的 http 狀態碼
+            if (xhr.status == 200 && xhr.readyState == 4) {
+              console.log(xhr.responseText);
+            }
+          };
+        };
+
+        //POST 請求數據
+        let btnPost = document.getElementById("btnPost");
+        btnPost.onclick = function() {
+          console.log("click");
+          //   開始跟後台進行互動
+          //   創建 xhr 對象
+          var xhr = new XMLHttpRequest();
+
+          //   與遠端連線
+          xhr.open("POST", "user.php", true);
+          xhr.setRequestHeader(
+            "Content-type",
+            "application/x-www-form-urlencoded"
+          );
+
+          xhr.send("id=123&name=allen&sex=male&age=30");
+
+          xhr.onreadystatechange = function() {
+            console.log("readyState:%s", xhr.readyState); //xhr 請求的狀態
+            console.log("status:%s", xhr.status); //後臺響應的 http 狀態碼
+            if (xhr.status == 200 && xhr.readyState == 4) {
+              console.log(xhr.responseText);
+            }
+          };
+        };
+      };
+    </script>
+
+    <form action="" enctype></form>
+  </body>
+</html>

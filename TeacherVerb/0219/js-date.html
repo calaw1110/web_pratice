@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let d = new Date();
+      console.log(d); // 現在時間
+
+      let year = d.getFullYear();
+      console.log(year);
+
+      let month = d.getMonth() + 1;
+      console.log(month);
+
+      let date = d.getDate();
+      console.log(date);
+
+      let day = d.getDay();
+      //   if (day == 0) {
+      //     day = "日";
+      //   }
+      let dayChinese = [
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六"
+      ];
+      let dayEnglish = ["SUM", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+      let dayJP = [
+        "日曜日",
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日"
+      ];
+
+      console.log(dayJP[day]);
+
+      console.log(d.getHours());
+      console.log(d.getMinutes());
+      console.log(d.getSeconds());
+
+      console.log(d.toDateString());
+      console.log(d.toTimeString());
+
+      //let text = year + "年" + month + "月" + date + "日";
+      let text = `${year} 年 ${month}月 ${date}日  `;
+      console.log(text);
+    </script>
+  </body>
+</html>

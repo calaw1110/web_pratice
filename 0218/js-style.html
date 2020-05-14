@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      //網頁載入完才觸發
+      window.onload = function() {
+        // let title1 = document.getElementById("title");
+        // console.log(title1.style);
+        // title1.style.color = "gray";
+        // title1.style.backgroundColor = "#abf";
+
+        let title2 = document.getElementById("title").style;
+        console.log(title2.style);
+        title2.color = "gray";
+        title2.backgroundColor = "#1ff1ff";
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1 id="title">Title</h1>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+  </body>
+</html>

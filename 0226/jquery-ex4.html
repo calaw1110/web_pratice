@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      jQuery(function() {
+        console.log("ready");
+        $("#checkAll").click(function() {
+          $("input:checkbox") //全部勾選
+            .not(this) //not 非現在點選的元素        所以點選了全部勾選  將非勾選的選項增加下面屬性 達成全部勾選
+            .prop("checked", this.checked);
+        });
+        $("button").click(function() {
+          $(".items input:checked") //找到被勾選的元素
+            .parents("tr") //往上一層找到父節點並刪除
+            .remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th><input type="checkbox" name="" id="checkAll" /></th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+      </tr>
+      <tr class="items">
+        <td><input type="checkbox" name="" id="" /></td>
+        <td>Mac mini</td>
+        <td>200</td>
+      </tr>
+      <tr class="items">
+        <td><input type="checkbox" name="" id="" /></td>
+        <td>Macbook Pro 13</td>
+        <td>1500</td>
+      </tr>
+      <tr class="items">
+        <td><input type="checkbox" name="" id="" /></td>
+        <td>iPad 2</td>
+        <td>123</td>
+      </tr>
+    </table>
+
+    <button>Delete</button>
+  </body>
+</html>

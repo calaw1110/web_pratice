@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+      $(function() {
+        console.log("dom ready");
+        $("select").change(function() {
+          var weatherID = $(this).val();
+          console.log(weatherID);
+          $.get(
+            "http://api.openweathermap.org/data/2.5/weather?id=" +
+              weatherID +
+              "&appid=你的api key&lang=zh_tw&units=metric",
+            function(response) {
+              console.log(response);
+              $("#weather").text(response.weather[0].description);
+              $("#temp").text(response.main.temp);
+              $("#maxTemp").text(response.main.temp_max);
+              $("#minTemp").text(response.main.temp_min);
+              $("#weatherIcon").attr({
+                src:
+                  "http://openweathermap.org/img/w/" +
+                  response.weather[0].icon +
+                  ".png",
+                alt: response.weather[0].description,
+                title: response.weather[0].description
+              });
+            }
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>
+      <select>
+        <option value="">請選擇城市</option>
+        <option value="1668341">台北市</option>
+        <option value="6696918">桃園市</option>
+        <option value="7280289">高雄市</option>
+      </select>
+      <img src="" alt="" id="weatherIcon" />
+    </h1>
+    <table>
+      <tr>
+        <td>目前天氣:</td>
+        <td id="weather"></td>
+      </tr>
+      <tr>
+        <td>目前氣溫</td>
+        <td id="temp"></td>
+      </tr>
+      <tr>
+        <td>最高溫</td>
+        <td id="maxTemp"></td>
+      </tr>
+      <tr>
+        <td>最低溫</td>
+        <td id="minTemp"></td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <title>BS4-基本類別-進度條類別</title>
+    <style>
+      #pd {
+        animation: plong 2s linear;
+      }
+      @keyframes plong {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      let i = 0;
+      function cc() {
+        if (i < 100) {
+          i++;
+        }
+        document.getElementById("pd").innerHTML = i + "%";
+        setTimeout(cc, 20);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="progress" style="height: 100px;">
+            <div class="progress-bar w-75 bg-danger">75%</div>
+          </div>
+          <div class="progress" style="height: 100px;">
+            <div class="progress-bar progress-bar-striped w-75 bg-info">
+              75%
+            </div>
+          </div>
+          <div class="progress" style="height: 100px;">
+            <div
+              class="progress-bar progress-bar-animated w-75 badge-secondary"
+            >
+              75%
+            </div>
+          </div>
+          <div class="progress" style="height: 100px;">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated w-75 bg-warning"
+            >
+              75%
+            </div>
+          </div>
+          <div class="progress" style="height: 100px;">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated w-100 bg-success"
+            >
+              100%
+            </div>
+          </div>
+          <div class="progress" style="height: 100px;">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated w-100 bg-primary"
+              id="pd"
+            >
+              100%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<!--
+進度條可以顯示使用者任務的完成過程。
+  建立一個基本的進度條的步驟如下：
+  • 加入一個帶有 .progress 類的 <div>。
+  • 接著，在上面的 <div> 內，加入一個帶有 class .progress-bar 的空的 <div>。
+  • 加入一個帶有百分比表示的寬度的 style 屬性，例如 style="width:70%" 表示進度條在 70% 的位置。
+
+進度條高度
+  進度條高度預設為 16px。我們可以使用 CSS 的 height 屬性來修改
+
+進度條標籤
+  可以在進度條內加入文字，如進度的百分比
+
+不同顏色的進度條
+  預設情況下進度條為藍色，Bootstrap4 還提供了以下顏色的進度條
+  bg-success
+  bg-warning
+  bg-info
+  bg-danger
+
+條紋的進度條
+  可以使用 .progress-bar-striped 類來設置條紋進度條
+
+動畫進度條
+  使用 .progress-bar-animated 類可以為進度條加入動畫
+
+ -->

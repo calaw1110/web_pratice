@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        background-color: #fff;
+      }
+      nav {
+        height: 60px;
+        width: 100%;
+        margin: auto;
+      }
+      nav .logo {
+        float: left;
+      }
+      nav .menu {
+        float: left;
+      }
+      nav .search {
+        float: right;
+      }
+      nav li {
+        float: left;
+        list-style: none;
+      }
+      nav ul {
+        padding: 0;
+        margin: 0;
+      }
+      nav a {
+        color: #555;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 15px;
+        display: block;
+        /* 轉場特效 */
+        transition: 0.5s;
+      }
+      .logo {
+        width: 300px;
+        height: 60px;
+      }
+      nav .logo a {
+        padding-right: 50px;
+        font-size: 1.5em;
+        /* background: #555; */
+        /* color: white; */
+        display: block;
+      }
+      nav .menu a:hover {
+        background: #eee;
+      }
+      nav .search a:hover {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://www.asus.com/media/img/2017/images/n-logo-asus.svg"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">產品</a></li>
+            <li><a href="#">熱門活動</a></li>
+            <li><a href="#">商用電腦</a></li>
+            <li>
+              <a href="#"
+                >ProArt <sup><small></small>New</sup></a
+              >
+            </li>
+            <li><a href="#">服務&社群</a></li>
+            <li><a href="#">商店</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <ul>
+            <li><a href="">登入</a></li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://www.asus.com/media/img/2017/images/n-icon-search.svg"
+                  alt="search"
+                  height="20px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+      jQuery(() => {
+        console.log("ready");
+        let target;
+        let dom;
+        $("input").focus(() => {
+          target = $(this);
+        });
+
+        $("input").focus(function() {
+          target = $(this).data("hint-target");
+          console.log(target);
+          $("#" + target).show();
+        });
+
+        $("input").blur(function() {
+          //判斷是否有值在裡面
+          const isInput = $(this).val();
+          if (isInput) {
+            $("#" + target)
+              .hide()
+              .css("color", "black");
+          } else {
+            $("#" + target)
+              .show()
+              .css("color", "red");
+          }
+        });
+      });
+    </script>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>ACCOUNT</div>
+    <div>
+      <input type="text" data-hint-target="account" />
+    </div>
+    <div class="hide" id="account">please input account</div>
+    <div>PASSWORD</div>
+    <div>
+      <input type="password" data-hint-target="password" />
+    </div>
+    <div class="hide" id="password">please input password</div>
+  </body>
+</html>

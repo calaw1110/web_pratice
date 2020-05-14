@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let d = new Date();
+      console.log(d);
+
+      let year = d.getFullYear();
+      console.log(year);
+
+      let month = d.getMonth() + 1; //取得月份陣列索引 然後+1才是真正的月份
+      console.log(month);
+      let date = d.getDate();
+      console.log(date);
+      let day = d.getDay();
+      console.log(day);
+
+      let dayChinese = [
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六"
+      ];
+      console.log(dayChinese[day]);
+      let dayJP = [
+        "日曜日",
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        " 日曜日",
+        "土曜日"
+      ];
+      console.log(dayJP[day]);
+      let hour = d.getHours();
+      console.log(hour);
+
+      let minute = d.getMinutes();
+      console.log(minute);
+
+      let second = d.getSeconds();
+      console.log(second);
+
+      console.log(d.toDateString());
+      console.log(d.toTimeString());
+
+      let txt = `${year}年${month}月${date}日，星期${day}`;
+      console.log(txt);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .list {
+        color: red;
+      }
+    </style>
+
+    <script>
+      function add() {
+        //取得 input的值
+        let item = document.getElementById("item").value;
+        if (item == "") {
+          //假如值為空 就回到上一部
+          return;
+        }
+
+        let itemText = document.createTextNode(item);
+
+        let li = document.createElement("li");
+        li.appendChild(itemText);
+        li.setAttribute("class", "list");
+
+        let todo = document.getElementById("todo");
+        todo.appendChild(li);
+        document.getElementById("item").value = "";
+
+        let alllist = document.querySelectorAll("li");
+        alllist.forEach(function(l) {
+          l.addEventListener("click", function() {
+            this.remove();
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="item" />
+    <button id="btn" onclick="add()">新增</button>
+    <ul id="todo">
+      <li class="list">ITEM</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      jQuery(function() {
+        // console.log("ready");
+        let conf = true;
+        $("#newTask").click(function() {
+          console.log("click");
+          const input = $("input");
+          //設計刪除按鈕
+          const deleteButton = '<span class="delete"> [DELETE] </span>';
+          //設計new task
+          const newList = '<span class="task">' + input.val() + "</span>";
+          //檢查是否有值
+          if (!input.val()) {
+            alert("TASK CAN NOT BE EMPTY");
+            return false;
+          }
+
+          //新增task
+          $("ul").append("<li>" + newList + "  " + deleteButton + "</li>");
+          //清空且focus
+          input.val("").focus();
+        });
+        //刪除鈕的功能
+        $(document).on("click", ".delete", function() {
+          console.log("delete click");
+          if (conf) {
+            const deleteCheck = confirm("Delete this task?");
+            if (deleteCheck)
+              $(this)
+                .parents()
+                .remove();
+          } else {
+            return false;
+          }
+        });
+
+        $("#confirm").click(function() {
+          console.log("confirm");
+          if (conf) {
+            conf = false;
+            $(this)
+              .text("off")
+              .css("background-color", "pink");
+          } else {
+            conf = true;
+            $(this)
+              .text("on")
+              .css("background-color", "red");
+          }
+        });
+      });
+    </script>
+    <style>
+      .task {
+        display: inline-block;
+      }
+      .delete {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>TASK</h2>
+    <p>Delete Confirm : <button type="button" id="confirm">on</button></p>
+    <hr />
+    <input type="text" name="" id="" />
+    <button id="newTask">newTask</button>
+    <ul></ul>
+  </body>
+</html>

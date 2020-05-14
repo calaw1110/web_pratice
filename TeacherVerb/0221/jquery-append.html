@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script>
+      $(function() {
+        // let element1 = $("<h1>TITLE</h1>");
+        // let element2 = $("<span></span>").text("Hello World");
+        // let element3 = $("<span></span>").html("<br><b>下課了</b>");
+
+        // $("body").append(element1);
+        // $("body").append(element2);
+        // $("body").append(element3);
+        $("#output").append("<h1>TITLE</h1>");
+
+        //   建立新的元素
+        let element = document.createElement("h1");
+        // 產生文字內容
+        let content = document.createTextNode("TITLE");
+        // 合併新元素與文字
+        element.appendChild(content);
+
+        let output = document.getElementById("output");
+        output.appendChild(element);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>

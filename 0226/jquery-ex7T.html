@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .task {
+        display: inline-block;
+        width: 300px;
+      }
+      .delete {
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $(function() {
+        console.log("Ready");
+        let conf = true;
+        //New Task Button
+        $("#newTask").click(function() {
+          console.log("READY");
+          const input = $("input");
+          //設計樣板DEL BUTTON
+          const deleteButton = "<span class='delete'>[DELETE]</span>";
+          //設計New Task Template
+          const newList = '<span class="task">' + input.val() + "</span>";
+          //check input is empty or not
+          if (!input.val()) {
+            alert("Task can not be empty");
+            return false;
+          }
+
+          //Add a new task
+          $("ul").append("<li>" + newList + "" + deleteButton + "</li>");
+
+          //清空 input,焦點轉移
+          input.val("").focus();
+        });
+
+        //Delete
+        $(document).on("click", ".delete", function() {
+          console.log("delete ready");
+          if (conf) {
+            //Confirm prompt
+            const deleteCheck = confirm("Delete this task?");
+            if (deleteCheck)
+              $(this)
+                .parent()
+                .remove();
+          } else {
+            return false;
+          }
+        });
+
+        //confirm
+        $("#confirm").click(function() {
+          console.log("confirm");
+          if (conf) {
+            conf = false;
+            $(this)
+              .text("off")
+              .css("background-color", "pink");
+          } else {
+            conf = true;
+            $(this)
+              .text("on")
+              .css("background-color", "red");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Task List</h1>
+    <p>Delete Confirm:<button type="button" id="confirm">On</button></p>
+    <hr />
+    <input type="text" />
+    <button id="newTask">New Task</button>
+    <ul></ul>
+  </body>
+</html>

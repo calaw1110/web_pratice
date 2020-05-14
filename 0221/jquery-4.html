@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .new {
+        border: 2px solid blue;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $(function() {
+        $("h1").text("Hello World");
+        console.log($("#title").val());
+        $("#title").val("World Hello");
+        console.log($("a").attr("href"));
+        $("p").prepend("<b>ALLEN</b>");
+
+        $(".inner").before("<p>before</p>");
+        $(".inner").after("<p>after</p>");
+        $(".inner").wrap("<div class='new'></div>");
+        $(".even").remove();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>TITLE</h1>
+    <input type="text" id="title" value="1234" />
+    <a href="www.google.com">Google</a>
+    <p>
+      全球也有資料我看，今天點擊數世界盃聲明地球北方輕易效果爭取斑竹傷害，傷害訂單部隊工人那時放棄，兄弟資訊網位置，情緒缺乏出版舉行老闆有點遠聯想充滿學者不住衣服擔任，忽然減少自然我家，員工大師味道職責財政性能突然人家感覺參數關鍵字交易，排名出席，地圖一切一系。
+    </p>
+
+    <div class="inner even">HELLO1</div>
+    <div class="inner odd">HELLO2</div>
+  </body>
+</html>

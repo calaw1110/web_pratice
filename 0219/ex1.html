@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      .gallery {
+        width: 500px;
+        margin: auto;
+      }
+      .thumbs {
+        text-align: center;
+      }
+      .thumbs img {
+        width: 100px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        let thumb = document.querySelectorAll(".thumb");
+        console.log(thumb);
+        thumb.forEach(function(data) {
+          console.log(data.dataset.img);
+        });
+        thumb.forEach(function(data) {
+          data.addEventListener("mouseover", function() {
+            let g = document.getElementById("g");
+            console.log(this.dataset.img); //用自定義屬性存取定應顏色的衣服圖片名稱路徑
+            console.log(this.getAttribute("src"));
+            console.log(g.getAttribute("src"));
+            // g.setAttribute("src", this.getAttribute("src"));將對應的圖片路徑值改成讀取自定義屬性的值
+            g.setAttribute("src", this.dataset.img); //
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <img src="../images/01.JPG" alt="" id="g" />
+    </div>
+    <div class="thumbs">
+      <img
+        src="../images/1.JPG"
+        class="thumb"
+        data-img="../images/01.JPG"
+        alt=""
+      />
+      <img
+        src="../images/2.JPG"
+        class="thumb"
+        data-img="../images/02.JPG"
+        alt=""
+      />
+      <img
+        src="../images/3.JPG"
+        class="thumb"
+        data-img="../images/03.JPG"
+        alt=""
+      />
+      <img
+        src="../images/4.JPG"
+        class="thumb"
+        data-img="../images/04.JPG"
+        alt=""
+      />
+      <img
+        src="../images/5.JPG"
+        class="thumb"
+        data-img="../images/05.JPG"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

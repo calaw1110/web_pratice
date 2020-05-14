@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .list {
+        color: red;
+      }
+    </style>
+    <script>
+      function newItem() {
+        // 先取輸入文字值
+        let item = document.getElementById("item").value;
+        if (item == "") {
+          return;
+        }
+        let itemText = document.createTextNode(item);
+
+        let li = document.createElement("li");
+        li.appendChild(itemText);
+        li.setAttribute("class", "list");
+
+        let todo = document.getElementById("todo");
+        todo.appendChild(li);
+        document.getElementById("item").value = "";
+      }
+
+      let allList = document.querySelectorAll("li");
+      //取出所有 <li></li> 子項目
+      allList.forEach(function(l) {
+        l.addEventListener("click", function() {
+          //這裡的刪除只針對既有的 <li> 子項目，透過按鍵 ADD 新增的就無法刪除了。
+          this.remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="item" />
+    <button id="btn" onclick="newItem()">新增項目</button>
+    <ul id="todo">
+      <li class="list">ITEM</li>
+    </ul>
+  </body>
+</html>

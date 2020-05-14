@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="pw" />
+    <button onclick="pwSwitch()">click</button>
+    <script>
+      function pwSwitch() {
+        let pw = document.getElementById("pw");
+        let pwAtr = pw.getAttribute("type");
+        console.log(pwAtr); //輸出　text
+        // if (pwAtr == "text") {
+        //   pw.setAttribute("type", "password");
+        // } else {
+        //   pw.setAttribute("type", "text");
+        // }
+        switch (pwAtr) {
+          case "text":
+            pw.setAttribute("type", "password");
+            break;
+          case "password":
+            pw.setAttribute("type", "text");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

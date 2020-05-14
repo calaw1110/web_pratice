@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Title</h1>
+    <button onclick="click_change()">click it!</button>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <script>
+      function click_change() {
+        let title1 = document.getElementById("title");
+        console.log(title1.style);
+        title.style.color = "gray";
+        title.style.backgroundColor = "#abf";
+
+        let title2 = document.getElementById("title").style;
+        console.log(title2.style);
+        title2.color = "gray";
+        title2.backgroundColor = "#1ff1ff";
+        title2.width = "80px";
+        title2.height = "80px";
+      }
+    </script>
+  </body>
+</html>

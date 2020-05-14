@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $().ready(function() {
+        console.log("ready");
+        // setInterval(() => {
+
+        // }, interval);
+        let flag = 0;
+        setInterval(function() {
+          const current = $("#light");
+          const prev = current.prev(".box");
+          const next = current.next(".box");
+          current.removeAttr("id"); //刪除id
+
+          switch (flag) {
+            case 0:
+              //假如可以下一動
+              if (next.length) {
+                next.attr("id", "light");
+              } else {
+                flag = 1;
+                prev.attr("id", "light");
+              }
+              break;
+            case 1: //假如可以上一動
+              if (prev.length) {
+                prev.attr("id", "light");
+              } else {
+                flag = 0;
+                next.attr("id", "light");
+              }
+              break;
+          }
+        }, 200);
+      });
+    </script>
+    <style>
+      .box {
+        width: 38px;
+        height: 38px;
+        border: 1px solid;
+        float: left;
+        margin: 10px;
+      }
+      #light {
+        background-color: pink;
+      }
+      .clearfix {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="light"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="clearfix"></div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      .gallery {
+        width: 500px;
+        margin: auto;
+      }
+      .thumbs {
+        text-align: center;
+      }
+      .thumbs img {
+        width: 100px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        let thumb = document.querySelectorAll(".thumb");
+        console.log(thumb);
+        thumb.forEach(function(data) {
+          console.log(data.dataset.img);
+        });
+        thumb.forEach(function(data) {
+          data.addEventListener("click", function() {
+            let g = document.getElementById("g");
+            console.log(this.dataset.img);
+            console.log(this.getAttribute("src"));
+            console.log(g.getAttribute("src"));
+            g.setAttribute("src", this.getAttribute("src"));
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <img src="../images/001.JPG" alt="" id="g" />
+    </div>
+    <div class="thumbs">
+      <img src="../images/001.JPG" class="thumb" data-img="" alt="" />
+      <img src="../images/002.JPG" class="thumb" data-img="" alt="" />
+      <img src="../images/003.JPG" class="thumb" data-img="" alt="" />
+      <img src="../images/004.JPG" class="thumb" data-img="" alt="" />
+      <img src="../images/005.JPG" class="thumb" data-img="" alt="" />
+    </div>
+  </body>
+</html>

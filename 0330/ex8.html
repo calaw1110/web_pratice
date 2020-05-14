@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3-Transition</title>
+    <style type="text/css">
+      body {
+        background-color: #e4ed89;
+        width: 580px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      div {
+        width: 500px;
+        height: 50px;
+        color: #60090a;
+        font-size: 26px;
+        margin: 10px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial;
+      }
+      .Topmenu {
+        width: 100px;
+        height: 35px;
+        background-color: #e86265;
+        color: #fff6f6;
+        font-size: 22px;
+        margin: 10px;
+        padding-top: 5px;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        float: left;
+        line-height: 35px;
+        transition: all 0.8s;
+      }
+      .Topmenu:hover {
+        height: 150px;
+        color: rgb(0, 0, 0);
+      }
+      .Topmenu span {
+        display: block;
+        transition: all 0.8s;
+      }
+      .Topmenu span:hover {
+        background-color: green;
+        color: ivory;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>MENU BAR<br />Please Choice your favorite!</div>
+    <hr />
+    <div class="Topmenu">
+      Home<br />
+      <span>History</span>
+      <span>Awards</span>
+      <span>Pepole</span>
+    </div>
+
+    <div class="Topmenu">
+      Portfolio<br />
+      <span>SightView</span>
+      <span>Landing</span>
+      <span>AtrDesign</span>
+    </div>
+
+    <div class="Topmenu">
+      PC Skill<br />
+      <span>Graphic</span>
+      <span>Website</span>
+      <span>Animation</span>
+    </div>
+
+    <div class="Topmenu">
+      Contact<br />
+      <span>Message</span>
+      <span>Mapguide</span>
+      <span>FaceBook</span>
+    </div>
+  </body>
+</html>

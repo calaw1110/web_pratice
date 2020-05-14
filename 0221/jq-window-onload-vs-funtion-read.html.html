@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+      //兩者差異
+      //ready 不用等整個網頁載入完成才執行動作
+      $().ready(function() {
+        $("h1").hide();
+      });
+      //window onload需要等整個網頁載入完成才會執行裡面的動作
+      $(window).on("load", function() {});
+
+      // Window.onload= function(){
+
+      // }
+    </script>
+  </head>
+  <body>
+    <h1 id="one">ASP</h1>
+    <h2 id="two">JSP</h2>
+    <h3 id="three">PHP</h3>
+    <h4 id="four">Django</h4>
+    <img src="https://source.unsplash.com/random/1920x1080?1" alt="" />
+    <img src="https://source.unsplash.com/random/1920x1080?2" alt="" />
+    <img src="https://source.unsplash.com/random/1920x1080?3" alt="" />
+    <img src="https://source.unsplash.com/random/1920x1080?4" alt="" />
+    <img src="https://source.unsplash.com/random/1920x1080?5" alt="" />
+    <img src="https://source.unsplash.com/random/1920x1080?6" alt="" />
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <script src="js/test.js"></script> -->
+    <script>
+      //var  具有重塑性
+      var test1 = 1;
+      console.log(test1);
+      var test1 = "test1";
+      console.log(test1);
+      //let不具重塑性
+      let test2 = 2;
+      console.log(test2);
+      //執行下面會失敗
+      // let test2 = "asd";
+      // console.log(test2);
+      //const 須給值不能空宣告
+      //  const a ;
+      //  console.log(a);會出現沒有初始化
+      const a = 3; //合法宣告
+      console.log(a);
+      //
+      for (let i = 5; i < 8; i++) {
+        console.log(i);
+      }
+      // var 沒寫在function裡會被當作全域變數
+      function vartest(params) {
+        for (var j = 0; j < 3; j++) {
+          console.log(j);
+        }
+      }
+      vartest();
+      //函數
+      let fun = function vartest(params) {
+        for (var test = 99; test < 102; test++) {
+          console.log(test);
+        }
+      };
+      //匿名函數
+      var function2;
+      (function() {
+        var i = 10;
+        var j = 2;
+        function2 = function() {
+          return i * j;
+        };
+      })();
+      function2();
+    </script>
+  </head>
+  <body></body>
+</html>

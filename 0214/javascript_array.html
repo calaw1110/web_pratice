@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let username = new Array(5);
+      username[0] = "1";
+      username[1] = "11";
+      username[2] = "111";
+      username[3] = "1111";
+      username[4] = "11111";
+      let username2 = new Array("2", "22", "222", "2222", "22222");
+
+      let username3 = ["3", "33", "333", "3333", "33333"];
+      //3種print 出陣列內值的方法
+      // 用for迴圈拜訪出每個值
+      for (let i = 0; i < 5; i++) {
+        console.log(username[i]);
+      }
+      //用foreach傳遞出每個值
+      username2.forEach(function(e) {
+        console.log(e);
+      });
+      //用for迴圈紀錄index 在print出陣列[index]的值
+      for (let index in username3) {
+        console.log(username3[index]);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

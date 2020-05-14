@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        function add() {
+          let element = document.createElement("p");
+          let content = document.createTextNode("hello world");
+          element.appendChild(content);
+          let out = document.getElementById("out");
+          out.appendChild(element.appendChild(content));
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="add()">click</button>
+    <div id="out"></div>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        .fixed-width {
+          width: 100%;
+          margin: auto;
+        }
+        .col-12 {
+          width: calc(100% / 12 * 12);
+        }
+
+        .col-11 {
+          width: calc(100% / 12 * 11);
+        }
+
+        .col-10 {
+          width: calc(100% / 12 * 10);
+        }
+
+        .col-9 {
+          width: calc(100% / 12 * 9);
+        }
+
+        .col-8 {
+          width: calc(100% / 12 * 8);
+        }
+
+        .col-7 {
+          width: calc(100% / 12 * 7);
+        }
+
+        .col-6 {
+          width: calc(100% / 12 * 6);
+        }
+
+        .col-5 {
+          width: calc(100% / 12 * 5);
+        }
+
+        .col-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-3 {
+          width: calc(100% / 12 * 3);
+        }
+
+        .col-2 {
+          width: calc(100% / 12 * 2);
+        }
+        .col-1 {
+          width: calc(100% / 12 * 1);
+        }
+      }
+      /* for phone */
+
+      /* for pad */
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .fixed-width {
+          width: 768px;
+          margin: auto;
+        }
+        .col-md-12 {
+          width: calc(100% / 12 * 12);
+        }
+
+        .col-md-11 {
+          width: calc(100% / 12 * 11);
+        }
+
+        .col-md-10 {
+          width: calc(100% / 12 * 10);
+        }
+
+        .col-md-9 {
+          width: calc(100% / 12 * 9);
+        }
+
+        .col-md-8 {
+          width: calc(100% / 12 * 8);
+        }
+
+        .col-md-7 {
+          width: calc(100% / 12 * 7);
+        }
+
+        .col-md-6 {
+          width: calc(100% / 12 * 6);
+        }
+
+        .col-md-5 {
+          width: calc(100% / 12 * 5);
+        }
+
+        .col-md-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-md-3 {
+          width: calc(100% / 12 * 3);
+        }
+
+        .col-md-2 {
+          width: calc(100% / 12 * 2);
+        }
+        .col-md-1 {
+          width: calc(100% / 12 * 1);
+        }
+      }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        .fixed-width {
+          width: 992px;
+          margin: auto;
+        }
+        .col-lg-12 {
+          width: calc(100% / 12 * 12);
+        }
+
+        .col-lg-11 {
+          width: calc(100% / 12 * 11);
+        }
+
+        .col-lg-10 {
+          width: calc(100% / 12 * 10);
+        }
+
+        .col-lg-9 {
+          width: calc(100% / 12 * 9);
+        }
+
+        .col-lg-8 {
+          width: calc(100% / 12 * 8);
+        }
+
+        .col-lg-7 {
+          width: calc(100% / 12 * 7);
+        }
+
+        .col-lg-6 {
+          width: calc(100% / 12 * 6);
+        }
+
+        .col-lg-5 {
+          width: calc(100% / 12 * 5);
+        }
+
+        .col-lg-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-lg-3 {
+          width: calc(100% / 12 * 3);
+        }
+
+        .col-lg-2 {
+          width: calc(100% / 12 * 2);
+        }
+        .col-lg-1 {
+          width: calc(100% / 12 * 1);
+        }
+      }
+      /* for pc */
+      @media screen and (min-width: 1200px) {
+        .fixed-width {
+          width: 1200px;
+          margin: auto;
+        }
+        .col-xl-12 {
+          width: calc(100% / 12 * 12);
+        }
+
+        .col-xl-11 {
+          width: calc(100% / 12 * 11);
+        }
+
+        .col-xl-10 {
+          width: calc(100% / 12 * 10);
+        }
+
+        .col-xl-9 {
+          width: calc(100% / 12 * 9);
+        }
+
+        .col-xl-8 {
+          width: calc(100% / 12 * 8);
+        }
+
+        .col-xl-7 {
+          width: calc(100% / 12 * 7);
+        }
+
+        .col-xl-6 {
+          width: calc(100% / 12 * 6);
+        }
+
+        .col-xl-5 {
+          width: calc(100% / 12 * 5);
+        }
+
+        .col-xl-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-xl-3 {
+          width: calc(100% / 12 * 3);
+        }
+
+        .col-xl-2 {
+          width: calc(100% / 12 * 2);
+        }
+        .col-xl-1 {
+          width: calc(100% / 12 * 1);
+        }
+      }
+      @media screen and (min-width: 1400px) {
+        .fixed-width {
+          width: 100%;
+          margin: auto;
+        }
+        .col-max-12 {
+          width: calc(100% / 12 * 12);
+        }
+
+        .col-max-11 {
+          width: calc(100% / 12 * 11);
+        }
+
+        .col-max-10 {
+          width: calc(100% / 12 * 10);
+        }
+
+        .col-max-9 {
+          width: calc(100% / 12 * 9);
+        }
+
+        .col-max-8 {
+          width: calc(100% / 12 * 8);
+        }
+
+        .col-max-7 {
+          width: calc(100% / 12 * 7);
+        }
+
+        .col-max-6 {
+          width: calc(100% / 12 * 6);
+        }
+
+        .col-max-5 {
+          width: calc(100% / 12 * 5);
+        }
+
+        .col-max-4 {
+          width: calc(100% / 12 * 4);
+        }
+
+        .col-max-3 {
+          width: calc(100% / 12 * 3);
+        }
+
+        .col-max-2 {
+          width: calc(100% / 12 * 2);
+        }
+        .col-max-1 {
+          width: calc(100% / 12 * 1);
+        }
+      }
+      /* 共用區 */
+      [class*="col"] {
+        float: left;
+        padding: 10px;
+      }
+      .full-width {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-width">
+      <div class="fixed-width">
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+        <div class=" col-6 col-md-4 col-lg-3  col-xl-2 col-max-1">
+          <h2>TITLE</h2>
+          <p>
+            形象不了版本義務液晶細節一體把你退出版面非常政治，崇拜動物一段標準你們的病毒回去平台暫時元素西方，求職紅色一遍便是維修您可以不敢無線貫徹表面，隊伍電視承受美麗造成鏡頭列表黑暗不了自行輔助翻譯電視台，此次金屬宜蘭基礎沒人和你晶片試題站長，前進攻擊詳細訊息開。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      //js function 前後宣告位置不影響呼叫
+      a();
+      function a() {
+        console.log("a");
+      }
+
+      //匿名函數 宣告須在呼叫之後
+      //呼叫在宣告之前 會產生 js-function.html:16 Uncaught ReferenceError: Cannot access '宣告名稱' before initialization
+      let b = function(c) {
+        console.log(c);
+      };
+      b(100);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        //   建立新的元素
+        let element = document.createElement("p");
+        // 產生文字內容
+        let content = document.createTextNode("Hello World");
+        // 合併新元素與文字
+        element.appendChild(content);
+
+        let output = document.getElementById("output");
+        output.appendChild(element);
+      };
+    </script>
+  </head>
+  <body>
+    <button id="btn" onclick="add()">CLICK</button>
+    <div id="output"></div>
+  </body>
+</html>

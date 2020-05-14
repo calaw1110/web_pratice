@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .test {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title" data-key="hello" data-value="world">TITLE</h1>
+    <input type="password" id="in" /><button id="btn" onclick="change()">
+      click
+    </button>
+    <script>
+      let t = document.getElementById("title");
+      console.log(t.getAttribute("id"));
+      console.log(t.getAttribute("data-key"));
+      console.log(t.getAttribute("data-value"));
+      t.setAttribute("class", "test");
+      let ty = document.getElementById("in");
+
+      function change() {
+        //點擊事件
+        // if (ty.getAttribute("type") == "password")
+        //   ty.setAttribute("type", "text");
+        // else ty.setAttribute("type", "password");
+
+        switch (ty.getAttribute("type")) {
+          case "text":
+            ty.setAttribute("type", "password");
+            break;
+          case "password":
+            ty.setAttribute("type", "text");
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

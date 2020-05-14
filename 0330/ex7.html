@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3-Transform</title>
+    <style type="text/css">
+      body {
+        background-color: #000;
+        width: 500px;
+        margin: 50px auto;
+      }
+      div {
+        width: 500px;
+        height: 25px;
+        background-color: #aff0fb;
+        color: #60090a;
+        font-size: 26px;
+        margin: 10px;
+        text-align: center;
+        padding-top: 25px;
+      }
+
+      #Drapshadow {
+        width: 500px;
+        height: 25px;
+        background: -webkit-linear-gradient(top, transparent, #aff0fb);
+        color: rgba(119, 57, 14, 0.3);
+        font-size: 26px;
+        text-align: center;
+        opacity: 0.8;
+        margin-top: -10px;
+        padding-top: 25px;
+        transform: rotateX(180deg);
+      }
+      #area {
+        background-color: transparent;
+        position: relative;
+        top: 50%;
+        left: 50%;
+      }
+      #a1,
+      #a2,
+      #a3,
+      #a4 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #fff;
+        margin: 0px;
+      }
+      #a1 {
+        transform: skewX(45deg);
+      }
+      #a2 {
+        transform: skewX(-45deg);
+        position: relative;
+        z-index: 3;
+        background-color: #7cdff0;
+      }
+      #a3 {
+        transform: skewX(45deg) translate(0px, -327px);
+        background-color: #98deea;
+      }
+      #a4 {
+        transform: skewX(-45deg) translate(-1308px, -980px);
+        position: relative;
+        z-index: -2;
+        background-color: #487880;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>CSS3 Transform Effect</div>
+    <div id="Drapshadow">CSS3 Transform Effect</div>
+    <div id="area">
+      <div id="a1"></div>
+      <div id="a2"></div>
+      <div id="a3"></div>
+      <div id="a4"></div>
+    </div>
+  </body>
+</html>

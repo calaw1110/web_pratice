@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let man = [];
+      man = [
+        {
+          //宣告物件
+          height: 180,
+          weight: 75,
+          //宣告陣列
+          interesting: ["吃飯", "睡覺", "看電影"],
+          exp: ["釣魚", "逛街"]
+        }
+      ];
+      console.log("----------use forLoop-----------");
+      console.log("身高" + man[0].height);
+      console.log("體重" + man[0].weight);
+      console.log("興趣");
+      for (let i = 0; i < man[0].interesting.length; i++) {
+        console.log(man[0].interesting[i]);
+      }
+      console.log("嗜好");
+      for (let i = 0; i < man[0].exp.length; i++) {
+        console.log(man[0].exp[i]);
+      }
+
+      console.log("----------use forEach-----------");
+      man.forEach(function(mandata) {
+        console.log("身高" + mandata.height);
+        console.log("體重" + mandata.weight);
+        console.log("興趣");
+        mandata.interesting.forEach(function(mansint) {
+          console.log(mansint);
+        });
+        console.log("嗜好");
+        mandata.exp.forEach(function(mansexp) {
+          console.log(mansexp);
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

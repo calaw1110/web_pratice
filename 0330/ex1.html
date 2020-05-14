@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS進階應用-基本屬性認識</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+      #s1 {
+        /* 給 1 個值 影響全部 ， 給 2 個值 影響對角線  前值影響左上右下 後值相反 */
+        border-radius: 10px;
+      }
+      #s2 {
+        /* 先水平後垂直  模糊程度 最後上顏色*/
+        box-shadow: 10px 20px 3px #333;
+      }
+      #s3 {
+        border: 10px solid #333;
+        border-image: url("images/img1.jpg");
+        border-image-repeat: round;
+        border-image-slice: 25;
+      }
+      #s4 {
+        background-image: url("images/b1.jpg");
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+      }
+      #s5 {
+        /* 先水平後垂直  模糊程度 最後上顏色*/
+        text-shadow: 4px 4px 2px #333, 4px 0px 2px #333, -4px 8px 2px #333;
+      }
+      @font-face {
+        src: url("fonts/qfont.otf");
+        font-family: webuse1;
+      }
+      @font-face {
+        src: url("fonts/GenJyuuGothicX-Light.ttf");
+        font-family: webuse2;
+      }
+      @font-face {
+        src: url("fonts/GenJyuuGothic-Heavy.ttf");
+        font-family: webuse3;
+      }
+      * {
+        font-family: webuse1;
+      }
+      p {
+        font-family: webuse2;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: webuse3;
+      }
+      h4 {
+        column-count: 3;
+        column-gap: 3px;
+        column-rule: 10px dashed #333;
+      }
+      h1 {
+        background-color: yellow;
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="s1">border-radius</div>
+    <div id="s2">box-shadow</div>
+    <div id="s3">border-image</div>
+    <div id="s4">background-size</div>
+    <div id="s5">text-shadow</div>
+    <h1>
+      Lorem ipsum dolor sit
+    </h1>
+    <p>
+      Responsive website design is a new trend in web design. It is made up of
+      multiple layouts and combined application technologies to ensure that
+      computers, tablets, mobile phones and other flat devices can achieve the
+      same visual and functional effects.The web version of Google Translate has
+      also been updated, and the layout adjustment, RWD, and new features have
+      been added. It can be seen that the RWD responsive website is a basic
+      requirement for all enterprises.
+    </p>
+
+    <h4>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repudiandae
+      quae, deserunt perspiciatis quos optio inventore esse culpa sed
+      consequuntur dicta. Nemo veniam sint expedita ad necessitatibus
+      consectetur reiciendis enim. Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Ratione nulla quis, voluptatum iusto iste accusantium?
+      Distinctio, eius labore aut odit exercitationem, aliquid vero nobis
+      impedit quidem at sint harum praesentium. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Dolor repudiandae quae, deserunt
+      perspiciatis quos optio inventore esse culpa sed consequuntur dicta. Nemo
+      veniam sint expedita ad necessitatibus consectetur reiciendis enim. Lorem
+      ipsum dolor sit amet consectetur, adipisicing elit. Ratione nulla quis,
+      voluptatum iusto iste accusantium? Distinctio, eius labore aut odit
+      exercitationem, aliquid vero nobis impedit quidem at sint harum
+      praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Dolor repudiandae quae, deserunt perspiciatis quos optio inventore esse
+      culpa sed consequuntur dicta. Nemo veniam sint expedita ad necessitatibus
+      consectetur reiciendis enim. Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Ratione nulla quis, voluptatum iusto iste accusantium?
+      Distinctio, eius labore aut odit exercitationem, aliquid vero nobis
+      impedit quidem at sint harum praesentium. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Dolor repudiandae quae, deserunt
+      perspiciatis quos optio inventore esse culpa sed consequuntur dicta. Nemo
+      veniam sint expedita ad necessitatibus consectetur reiciendis enim. Lorem
+      ipsum dolor sit amet consectetur, adipisicing elit. Ratione nulla quis,
+      voluptatum iusto iste accusantium? Distinctio, eius labore aut odit
+      exercitationem, aliquid vero nobis impedit quidem at sint harum
+      praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Dolor repudiandae quae, deserunt perspiciatis quos optio inventore esse
+      culpa sed consequuntur dicta. Nemo veniam sint expedita ad necessitatibus
+      consectetur reiciendis enim. Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Ratione nulla quis, voluptatum iusto iste accusantium?
+      Distinctio, eius labore aut odit exercitationem, aliquid vero nobis
+      impedit quidem at sint harum praesentium. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Dolor repudiandae quae, deserunt
+      perspiciatis quos optio inventore esse culpa sed consequuntur dicta. Nemo
+      veniam sint expedita ad necessitatibus consectetur reiciendis enim. Lorem
+      ipsum dolor sit amet consectetur, adipisicing elit. Ratione nulla quis,
+      voluptatum iusto iste accusantium? Distinctio, eius labore aut odit
+      exercitationem, aliquid vero nobis impedit quidem at sint harum
+      praesentium.
+    </h4>
+  </body>
+</html>
+<!--
+css進階設定  再也不需要影像處理囉!
+	border-radius:圓角
+	box-shadow:區塊陰影
+	border-image:邊框影像
+	background-size:背景影像縮放
+	@font-face:導入字型
+	text-shadow:文字陰影
+	column...:多欄顯示
+	opacity:不透明度
+ -->

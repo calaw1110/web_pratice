@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>BS4-基本類別-卡片</title>
+  </head>
+  <body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <!--    .card>.card-header+.card-body+.card-footer  -->
+      <div class="card bg-dark">
+        <div class="card-header bg-light"><h1 class="card-title text-center">Welcome</h1></div>
+        <div class="card-body bg-warning"><h2 class="card-text">SALE!</h2></div>
+        <div class="card-footer bg-light"><p class="text-right"><a href="" class="card-link">3C Web</a></p></div>
+      </div>
+
+      <div class="card bg-dark">
+        <div class="card-header bg-light"><h1 class="card-title text-center">Welcome</h1></div>
+        <div class="card-body"><h2 class="card-text card-img-overlay small mt-5">SALE!Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+        <img src="dog.jpg" class="img-thumbnail"></div>
+        <div class="card-footer bg-light"><p class="text-right"><a href="" class="card-link">3C Web</a></p></div>
+     </div>
+
+      <div class="card bg-dark alert">
+        <div class="card-header bg-light"><h1 class="card-title text-center">Welcome</h1></div>
+        <div class="card-body bg-warning"><h2 class="card-text">SALE!</h2></div>
+        <div class="card-footer bg-light"><p class="text-right"><a href="" class="card-link" data-dismiss="alert">&times;</a></p></div>
+      </div>
+   </div>
+ </div>
+</div>
+  
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- 
+Bootstrap4 的 .card 與 .card-body 類來建立一個簡單的卡片
+
+卡片頭部和底部
+  .card-header類用於建立卡片的頭部樣式， .card-footer 類用於建立卡片的底部樣式
+
+多種顏色卡片
+  Bootstrap 4 提供了多種卡片的背景顏色類： .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark 和 .bg-light
+
+標題、文字和連結
+  我們可以在頭部元素上使用 .card-title 類來設置卡片的標題 。 .card-text 類用於設置卡片正文的內容。 .card-link類用於給連結設置顏色
+
+圖片卡片
+  <img> 加入 .card-image-top（圖片在文字上方） 或 .card-image-bottom（圖片在文字下方 來設置圖片卡片
+  如果圖片要設置為背景，可以使用 .card-img-overlay 類
+ -->

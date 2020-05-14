@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3-Animations</title>
+    <style type="text/css">
+      body {
+        background-color: #eba6a8;
+        font-family: Arial;
+        animation: bgChange 7s infinite alternate;
+      }
+      @keyframes bgChange {
+        0% {
+          background: rgb(255, 0, 0);
+        }
+        10% {
+          background: rgb(rgb(221, 125, 0), green, blue);
+        }
+        20% {
+          background: rgb(235, 231, 11);
+        }
+        30% {
+          background: rgb(44, 236, 44);
+        }
+        40% {
+          background: rgb(46, 191, 204);
+        }
+        50% {
+          background: rgb(54, 131, 255);
+        }
+        60% {
+          background: rgb(188, 57, 240);
+        }
+        70% {
+          background: rgb(189, 49, 91);
+        }
+        80% {
+          background: rgb(218, 51, 51);
+        }
+        90% {
+          background: rgb(199, 116, 116);
+        }
+        100% {
+        }
+      }
+      div {
+        width: 500px;
+        height: 50px;
+        background-color: #aff0fb;
+        color: #60090a;
+        font-size: 26px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        animation: MoveRight1 1s infinite alternate linear;
+      }
+      @keyframes MoveRight1 {
+        from {
+          margin-left: 0px;
+        }
+        to {
+          margin-left: 70%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>網頁設計的好幫手-CSS</div>
+  </body>
+</html>

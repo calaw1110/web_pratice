@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+  </head>
+  <body>
+    <input type="button" id="button" value="增加新標籤" />
+    <input type="button" id="button1" value="刪除新標籤" />
+
+    <div id="newelement"></div>
+    <script>
+      $(function() {
+        var divid;
+        divid = 1;
+        // 新增標籤
+        $("#button").click(function() {
+          console.log(divid);
+          $("body").append(
+            '<div style="border:1px soild black;cursor:pointer;width:200px;" id=' +
+              divid +
+              "> 新的 div 元素 id=" +
+              divid +
+              "</div>"
+          );
+
+          divid = divid + 1;
+        });
+        console.log(divid);
+        $(document).on("click", "div", "hello", function(e) {
+          $(this).css({
+            color: "red",
+            "font-weight": "bold"
+          });
+          // $(this).remove();
+          console.log(e.data);
+        });
+        $("#button1").click(function() {
+          console.log("button1 click");
+          $("div#3").remove();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      jQuery(function() {
+        console.log("ready");
+        $(".title").click(function(){
+            console.log("click");
+            //該清單標題的下一個元素
+            $(this).next().slideToggle();
+        })
+      });
+    </script>
+    <style>
+    div{
+        width: 200px;
+    }
+    .title{
+        cursor: pointer;
+        background: rgb(255, 175, 175);
+    }
+    .content{
+        background: #666;
+        height: 200px;
+        display: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="title">#1 Macbook</div>
+    <div class="content">bababa</div>
+    <div class="title">#2 iPad</div>
+    <div class="content">bababa</div class="content">
+    <div class="title">#3 iPhone</div>
+    <div class="content">bababa</div class="content">
+    <div class="title">#4 iMac</div>
+    <div class="content">bababa</div class="content">
+    <div class="title">#5 AirPods</div>
+    <div class="content">bababa</div>
+  </body>
+</html>

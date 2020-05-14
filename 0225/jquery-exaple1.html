@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+      $(function() {
+        $("tr.color:odd").css({
+          color: "#fff",
+          backgroundColor: "red"
+        });
+        $("tr.color:even").css({
+          color: "#000",
+          backgroundColor: "#aaa"
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+      <tr class="color">
+        <td>iPhone</td>
+        <td>300</td>
+      </tr>
+      <tr class="color">
+        <td>iMac</td>
+        <td>450</td>
+      </tr>
+      <tr class="color">
+        <td>iPad</td>
+        <td>200</td>
+      </tr>
+      <tr class="color">
+        <td>Apple Watch</td>
+        <td>200</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    /><link rel="shortuct icon" href="images/breadIcon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function () {
+        $("#logo").click(function () {
+          $("html,body").animate({ scrollTop: $("#banner").offset().top }, 800);
+        });
+        $("#b1").click(function () {
+          $("html,body").animate(
+            { scrollTop: $("#product").offset().top - 50 },
+            800
+          );
+        });
+        $("#b2").click(function () {
+          $("html,body").animate(
+            { scrollTop: $("#about").offset().top - 50 },
+            800
+          );
+        });
+        $("#b3").click(function () {
+          $("html,body").animate(
+            { scrollTop: $("#cf").offset().top - 50 },
+            800
+          );
+        });
+        $("#b4").click(function () {
+          $("html,body").animate(
+            { scrollTop: $("#contact").offset().top },
+            800
+          );
+        });
+
+        $("#line1").show();
+        $("#line2").hide();
+        $("#line1Btn").click(function () {
+          $("#line1").show();
+          $("#line2").hide();
+        });
+        $("#line2Btn").click(function () {
+          $("#line2").show();
+          $("#line1").hide();
+        });
+      });
+    </script>
+    <script>
+
+        function send() {
+
+          var name = document.getElementById("nameInput").value;
+          var email = document.getElementById("emailInput").value;
+          var msg = document.getElementById("msgInput").value;
+          if (name == "" || email == "" || msg == "") {
+            alert("請輸入內容");
+          } else {
+            location.href =
+              "https://docs.google.com/forms/d/e/1FAIpQLSfaSRIeXjBxk6IeErJpeBiIMXKiOqFUQ2oGpEXABUOoTtnK8w/formResponse?entry.831957307=" +
+              name +
+              "&entry.1908525439=" +
+              email +
+              "&entry.144547063=" +
+              msg;
+          }
+        }
+        function back() {
+          location.href = "index.html";
+          alert("感謝您的回覆");
+        }
+
+    </script>
+
+    <style>
+      body {
+        font-family: 微軟正黑體;
+      }
+      .textShadow {
+        text-shadow: 2px 2px 2px #666;
+      }
+      .picTitle {
+        font-size: 5rem;
+        text-shadow: 2px 2px 2px #666;
+      }
+      #pic1 {
+        background-image: url("images/bread1.jpg");
+      }
+      #pic2 {
+        background-image: url("images/bread2.jpg");
+      }
+      #pic3 {
+        background-image: url("images/bread3.jpg");
+      }
+      .picIntro{
+			height: 22.6%; /*245px/1080px*/
+			overflow: hidden;
+		}
+
+	    .picIntro p{
+	    	position: relative;
+	    	top: -100px;
+	    	left: 0px;
+	    	opacity: 0;
+	    	color: #fff;
+	    	width: 90%;
+	    	margin: 0% auto;
+	    	transition: all 0.8s;
+	    	height: 0px;
+	    	font-size: 12px;
+
+	    }
+		.picIntro:hover img{
+			filter: brightness(0.35);
+			transition: all 0.5s;
+		}
+
+		.picIntro:hover p{
+	    	opacity: 1;
+		}
+
+		.textFormat{
+			letter-spacing:1px;
+			line-height:2rem;
+			text-indent: 2rem;
+		}
+		.navBg{
+			background-color: rgba(250,200,50,0.5);
+			transition: all 0.5s;
+		}
+		.navBg:hover{
+			background-color: rgba(250,200,50,1);
+			cursor:pointer;
+		}
+
+		.productImg{
+			filter: brightness(0.75) saturate(0.8);
+			transition: all 0.8s;
+		}
+
+		.productImg:hover{
+			cursor:pointer;
+			filter: brightness(1) saturate(1.5);
+		}
+
+	@media screen and (max-width: 575px){
+		.picTitle{
+		font-size: 2rem;/*1rem=16px*/
+
+
+		}
+	}
+    </style>
+    <title>Calaw麵包坊</title>
+  </head>
+  <body data-spy="scroll" data-=".navbar" oncontextmenu="window.event.returnValue=false;alert('請勿複製本站內容喔～\n有需要可以跟站長聯絡')">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm fixed-top navbar-dark navBg">
+        <h1 class="navbar-brand textShadow" id="logo">Calaw麵包坊</h1>
+        <button
+          class="navbar-toggler"
+          id="btn"
+          data-target="#menu"
+          data-toggle="collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+          <!-- 導覽列 -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#product" class="nav-link" id="b1">最新商品</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link" id="b2">關於我們</a>
+            </li>
+            <li class="nav-item">
+              <a href="#cf" class="nav-link" id="b3">精緻作品</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" id="b4">聯絡資訊</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 輪撥 -->
+      <div class="row" id="banner">
+        <div class="col p-0">
+          <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active vh-100" id="pic1">
+                <!-- <img src="images/bread1.jpg" alt="" class="img-fluid" /> -->
+                <div
+                  class="carousel-caption justify-content-center align-items-center d-flex h-100"
+                >
+                  <h1 class="picTitle">美味 可口 健康</h1>
+                </div>
+              </div>
+              <div class="carousel-item vh-100" id="pic2">
+                <!-- <img src="images/bread2.jpg" alt="" class="img-fluid" /> -->
+                <div
+                  class="carousel-caption justify-content-center align-items-center d-flex h-100"
+                >
+                  <h1 class="picTitle">美味可口健康</h1>
+                </div>
+              </div>
+              <div class="carousel-item vh-100" id="pic3">
+                <!-- <img src="images/bread3.jpg" alt="" class="img-fluid" /> -->
+                <div
+                  class="carousel-caption justify-content-center align-items-center d-flex h-100"
+                >
+                  <h1 class="picTitle">美味可口健康</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- 這是商品展示區 -->
+  	<div class="row  pb-5" id="product">
+	    <div class="col-12 col-sm-8 offset-sm-2 my-5">
+	    	  <h1 class="h3 border-bottom font-weight-bold">新貨搶鮮報</h1>
+	    </div>
+
+		  	<div class="col-12 col-sm-2 offset-sm-2 text-center my-3">
+		  		<img src="images/bread4.jpg" class="img-thumbnail productImg" data-toggle="modal" data-target="#big1" title="左鍵一下開啟">
+		  			<small class="h5">-高營養蕎麥-</small>
+				  		<div class="modal fade" id="big1">
+				  			<div class="modal-dialog modal-xl">
+				  				<div class="modal-content" >
+				  					<div class="modal-header"><h1 class="modal-title">-高營養蕎麥-</h1></div>
+				  					<div class="modal-body"><img src="images/bread4.jpg" class="img-fluid"></div>
+				  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big1">&times;</span></div>
+				  				</div>
+				  			</div>
+				  		</div>
+		  	</div>
+
+		  	<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread5.jpg" class="img-thumbnail productImg" data-toggle="modal" data-target="#big2" title="左鍵一下開啟">
+		  		  <small class="h5">-蜂蜜吐司-</small>
+			  		 <div class="modal fade" id="big2">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-蜂蜜吐司-</h1></div>
+			  					<div class="modal-body"><img src="images/bread5.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big2">&times;</span></div>
+			  			   </div>
+			  		   </div>
+		  	         </div>
+		    </div>
+
+		  	<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread6.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big3" title="左鍵一下開啟">
+		  		<small class="h5">-芝麻牛角-</small>
+			  		<div class="modal fade" id="big3">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-芝麻牛角-</h1></div>
+			  					<div class="modal-body"><img src="images/bread6.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big3">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread7.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big4" title="左鍵一下開啟">
+		  		<small class="h5">-椰子奶酥-</small>
+			  		<div class="modal fade" id="big4">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-椰子奶酥-</h1></div>
+			  					<div class="modal-body"><img src="images/bread7.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big4">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  	<div class="col-12 col-sm-2 offset-sm-2 text-center my-3">
+		  		<img src="images/bread8.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big5" title="左鍵一下開啟">
+		  		<small class="h5">-馬卡龍肉鬆-</small>
+			  		<div class="modal fade" id="big5">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-馬卡龍肉鬆-</h1></div>
+			  					<div class="modal-body"><img src="images/bread8.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big5">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread9.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big6" title="左鍵一下開啟">
+		  		<small class="h5">-白砂糖波蘿-</small>
+			  		<div class="modal fade" id="big6">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-白砂糖波蘿-</h1></div>
+			  					<div class="modal-body"><img src="images/bread9.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big6">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread10.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big7" title="左鍵一下開啟">
+		  		<small class="h5">-千層夾心捲-</small>
+			  		<div class="modal fade" id="big7">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-千層夾心捲-</h1></div>
+			  					<div class="modal-body"><img src="images/bread10.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big7">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread11.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big8" title="左鍵一下開啟">
+		  		<small class="h5">-葡萄椰子吐司-</small>
+			  		<div class="modal fade" id="big8">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-葡萄椰子吐司-</h1></div>
+			  					<div class="modal-body"><img src="images/bread11.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big8">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  	<div class="col-12 col-sm-2 offset-sm-2 text-center my-3">
+		  		<img src="images/bread12.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big9" title="左鍵一下開啟">
+		  		<small class="h5">-法國千層派-</small>
+			  		<div class="modal fade" id="big9">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-法國千層派-</h1></div>
+			  					<div class="modal-body"><img src="images/bread12.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big9">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+			  	<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread13.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big10" title="左鍵一下開啟">
+		  		<small class="h5">-藍莓甜甜圈-</small>
+			  		<div class="modal fade" id="big10">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-藍莓甜甜圈-</h1></div>
+			  					<div class="modal-body"><img src="images/bread13.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big10">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread14.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big11" title="左鍵一下開啟">
+		  		<small class="h5">-柴木海鮮吐司-</small>
+			  		<div class="modal fade" id="big11">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-柴木海鮮吐司-</h1></div>
+			  					<div class="modal-body"><img src="images/bread14.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer"><span class="close" data-toggle="modal" data-target="#big11">&times;</span></div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+
+		  		<div class="col-12 col-sm-2 text-center my-3">
+		  		<img src="images/bread15.jpg" class="img-thumbnail productImg"data-toggle="modal" data-target="#big12" title="左鍵一下開啟">
+		  		<small class="h5">-芥末吐司蛋糕-</small>
+			  		<div class="modal fade" id="big12">
+			  			<div class="modal-dialog modal-xl">
+			  				<div class="modal-content" >
+			  					<div class="modal-header"><h1 class="modal-title">-芥末吐司蛋糕-</h1></div>
+			  					<div class="modal-body"><img src="images/bread15.jpg" class="img-fluid"></div>
+			  					<div class="modal-footer">
+			  					<span class="close" data-toggle="modal" data-target="#big12">&times;</span>
+			  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+		  	</div>
+  		</div>
+
+
+      <!-- 關於我們 -->
+      <div class="row  pb-5" id="about">
+        <div class="col-12 col-sm-8 offset-sm-2 my-5">
+          <h1 class="h3 border-bottom font-weight-bold pb-3">關於我們</h1>
+        </div>
+        <div class="col-12 col-sm-4 offset-sm-2">
+          <p
+            style="letter-spacing: 1px; line-height: 2rem; text-align: justify;"
+          >
+            Debby麵包食品有限公司創立於民國105年。 ...
+            本公司擁有優秀的經營團隊，秉持著『Baking Excellence & Value
+            Added』的經營理念，追求企業整體營運穩定及永續經營及成長。本公司擁有優秀的經營團隊，秉持著『Baking
+            Excellence & Value
+            Added』的經營理念，追求企業整體營運穩定及永續經營及成長。由於囊括歐式麵包烘焙技術，稟承中點製作技藝精華，產品相繼為國內五星級飯店及航空公司所選用。歷經半世紀的歲月變遷，烘焙技藝代代相傳，產品種類迭有創新。唯一不變的是：對每一份產品的用心及尊重。2018年Debby麵包將帶給大家全新的產品規劃與滿足大家味蕾的精緻糕餅點心，請大家拭目以待。
+          </p>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div class="row">
+            <div class="col-12 col-sm-6 p-2 text-center picIntro">
+              <img src="images/p1.jpg" alt="" class="img-fluid" />
+              <p>
+                路易 劉<br />
+                <small>營運長 & 創意主廚</small><br />
+                全球收集多款新式創意麵包料理期待讓更多顧客可以喜歡Debby~
+              </p>
+            </div>
+            <div class="col-12 col-sm-6 p-2 text-center picIntro">
+              <img src="images/p2.jpg" alt="" class="img-fluid" />
+              <p>
+                寶春 吳<br />
+                <small>顧問主廚</small><br />
+                全球知名麵包料理達人!許多的麵包經由他的雙手被創造出來!
+              </p>
+            </div>
+            <div class="col-12 col-sm-6 p-2 text-center picIntro">
+              <img src="images/p3.jpg" alt="" class="img-fluid" />
+              <p>
+                大海 江<br />
+                <small>行銷店長</small><br />
+                江董的貼心讓所有創業主更放心
+              </p>
+            </div>
+            <div class="col-12 col-sm-6 p-2 text-center picIntro">
+              <img src="images/p4.jpg" alt="" class="img-fluid" />
+              <p>
+                美媛 王<br />
+                <small>展業店長</small><br />
+                未來將讓Debby麵包走向國際化
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- 這是影片展示區 -->
+<div class="row pb-5" id="cf">
+  <div class="col-12 col-sm-8 offset-sm-2 my-5">
+    <h1 class="h3 border-bottom font-weight-bold">精緻作品</h1>
+    <div class="embed-responsive embed-responsive-16by9">
+      <div clss="embed-responsive-item">
+        <video src="media/total.mp4" loop autoplay muted></video>
+      </div>
+    </div>
+    <p>
+         做麵包，簡單來說，就是將少量能夠生成二氧化碳的酵母加入麵粉和水中混合。麵包師的雙手創造了一種結構，將酵母釋放氣體的能力與緊實而富有彈性的麵糰充分融合在一起。之後，便可利用高溫將這種結構定型－於是，一個個新鮮出爐的麵包便呈現在我們面前，令人垂涎欲滴。無論是哪種麵包，其化學變化的關鍵都是將長鏈分子變成晶格分子。很多食物都會涉及這樣的過程，利用水和脂肪等各種食材創造出誘人的味道和口感。具體到麵包，它所涉及的分子名為麥穀蛋白，這是小麥蛋白家族的一員，對於生成麵包的結構至關重要。
+    </p>
+  </div>
+</div>
+
+      <!-- 聯絡我們 -->
+      <div class="row my-5" id="contact">
+        <div class="col-12 col-md-4 offset-md-2 my-3">
+          <h1>聯絡我們</h1>
+          <iframe
+            style="display: none;"
+            name="hidden_Area"
+            onload="this.onload=function(){window.location.href='index.html';back();}"
+          ></iframe>
+          <form method="POST" target="hidden_Area">
+            <div class="row">
+              <div class="col-12 col-md-6 my-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="請輸入真實的姓名 (必填)"
+                  name="name"
+                  required
+                  id="nameInput"
+                />
+              </div>
+              <div class="col-12 col-md-6 my-2">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="請輸入正確格式電子郵件 (必填)"
+                  name="email"
+                  required
+                  id="emailInput"
+                />
+              </div>
+              <div class="col-12 my-2">
+                <textarea
+                  name="msg"
+                  id="msgInput"
+                  cols="30"
+                  rows="8"
+                  placeholder="請輸入留言 最多200個字"
+                  class="form-control clearResize"
+                ></textarea>
+              </div>
+            </div>
+            <input
+              type="button"
+              class="btn btn-success btn-sm"
+              onclick="send()"
+              value="發送訊息"
+
+            />
+          </form>
+        </div>
+        <div class="col-12 col-md-4 my-3">
+          <h1>來訪路線</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8606.489899772574!2d121.17252958599899!3d24.930577147143776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc24080034849b3e3!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5qGD56u56IuX5YiG572y5bm8542F6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1588554281055!5m2!1szh-TW!2stw"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+            id="line1"
+            width="100%"
+            height="73%"
+          ></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22980.513523196434!2d121.14425586969723!3d24.891020858351983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x35910cb11f5b02bf!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5qGD56u56IuX5YiG572y!5e0!3m2!1szh-TW!2stw!4v1588554914548!5m2!1szh-TW!2stw"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+            id="line2"
+            width="100%"
+            height="73%"
+          ></iframe>
+          <a class="btn btn-sm btn-primary text-white"  id="line1Btn">幼獅</a>
+          <a class="btn btn-sm btn-primary text-white"  id="line2Btn">楊梅</a href="">
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row" id="footer">
+        <div class="col jumbotron jumbotron-fluid my-0 bg-warning text-center">
+          -專業麵包烘培&copy;-2020
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

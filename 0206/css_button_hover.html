@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .btn1 {
+        display: inline-block;
+        text-decoration: none;
+        background-color: rgba(140, 240, 201, 0.8);
+        border-radius: 10%;
+        padding: 10px 30px;
+      }
+      .btn2:hover {
+        	border-radius: 25px;
+          transition: all 0.5s linear;
+      }
+      .btn2 {
+        height: 50px;
+        width: 120px;
+        display: inline-block; /*水平擺放*/
+        text-decoration: none; /*取消擺飾*/
+        color: black;
+        background-color: rgba(88, 124, 241, 0.8);
+        border-radius: 10%;
+        text-align: center; /*水平置中*/
+        line-height: 50px;
+      }
+      .btn3{
+          height: 40px;
+          padding-left:30px ;
+          padding-right:30px ;
+          display: inline-block;
+          text-decoration: none;
+          color: black;
+          background-color: rgb(218, 107, 107);
+          border-radius: 10%;
+          line-height: 40px;
+      }
+       /*父元素底下全部*/
+       a:hover{
+         color: red;
+         background-color: saddlebrown;
+       }
+      /*針對某class*/
+      .btn1:hover{
+        color: white;
+        background-color:black;
+      }
+
+    </style>
+  </head>
+  <body>
+    <a href="#" class="btn1">LINK</a>
+    <a href="#" class="btn1">LINKLINK</a>
+    <a href="#" class="btn1">LINKLINKLINK</a></br>
+    <a href="#" class="btn2">LINK</a>
+    <a href="#" class="btn2">LINKLINK</a>
+    <a href="#" class="btn2">LINKLINKLINK</a></br>
+    <a href="#" class="btn3">LINK</a>
+    <a href="#" class="btn3">LINKLINK</a>
+    <a href="#" class="btn3">LINKLINKLINK</a>
+  </body>
+</html>

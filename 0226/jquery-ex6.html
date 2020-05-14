@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+      $().ready(function() {
+        console.log("ready");
+        $("#add").click(function() {
+          $("ul").append("<li>item </li>");
+        });
+        $("#del").click(function() {
+          $("li:last").remove();
+        });
+        //清空全部
+        // $("#del").click(function() {
+        //   $("ul").empty();//從選取父元素 清除父元素以下
+        // });
+        // $("#del").click(function() {
+        //   $("li").remove();選取該元素 清除該元素
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="add">add</button>
+    <button id="del">del</button>
+    <ul>
+      <li>item-1</li>
+      <li>item-2</li>
+      <li>item-3</li>
+      <li>item-4</li>
+      <li>item-5</li>
+      <li>item-6</li>
+    </ul>
+  </body>
+</html>
